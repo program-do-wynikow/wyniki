@@ -30,6 +30,8 @@ namespace WIZUALIZACJA_CAT_STREAM
         private void button1_Click(object sender, EventArgs e)
 
         {
+            listBox1.Font = new Font(FontFamily.GenericMonospace, textBox.Font.Size);
+            listBox1.HorizontalScrollbar = true;
             ExcelHandler excelhandler;
             try
             {
