@@ -28,11 +28,9 @@ namespace WIZUALIZACJA_CAT_STREAM
         }
         public string Row_toString(int row)
         {
-            string res = "";
-            //int j = 0;
-            //while (data.Rows[row][j].ToString() != null) res += 
-            for (int j = 0; j < data.Columns.Count; j++) res += data.Rows[row][j].ToString() + " ";
-            return res;
+            string names = "", club = data.Rows[row][data.Columns.Count-1].ToString();
+            for (int j = 0; j < data.Columns.Count-1; j++) names += data.Rows[row][j].ToString() + " ";
+            return Pretty_String.Generate(names, club);
         }
     }
 }
